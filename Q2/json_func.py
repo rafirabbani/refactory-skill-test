@@ -10,7 +10,7 @@ def phone_check():
     for phone in data:
         phone_data = phone['profile']['phones']
         if phone_data == []:
-            print('username', phone['username'], 'does not have phone')
+            print('Username', phone['username'], 'does not have phone')
     print()
 
 phone_check()
@@ -22,7 +22,7 @@ def articles_check():
     for articles in data:
         articles_data = articles['articles:']
         if articles_data != []:
-            print('username', articles['username'], 'does have some articles')
+            print('Username', articles['username'], 'does have some articles')
     print()
 
 articles_check()
@@ -34,7 +34,7 @@ def check_annis():
     for names in data:
         names_data = names['profile']['full_name']
         if subString in names_data:
-            print('username', names['username'], 'contains Annis')
+            print('Username', names['username'], 'contains Annis')
     print()
 
 check_annis()
@@ -53,9 +53,9 @@ def articles_2020():
                 user_with_article_list.append(articles['username'])
         article_count = user_with_article_list.count(articles['username'])
         if article_count > 0:
-            print('username', articles['username'], 'has', article_count, 'articles in 2020')
+            print('Username', articles['username'], 'has', article_count, 'articles in 2020')
         else:
-            print('no one has article published in 2020')
+            print('No one has article published in 2020')
         break
     print()
 
@@ -69,7 +69,7 @@ def born_1986():
         birth_data = birth['profile']['birthday']
         birth_date = datetime.strptime(birth_data[:4], '%Y')
         if birth_date == year:
-            print('username', birth['username'], 'born in', datetime.strftime(year, '%Y'))
+            print('Username', birth['username'], 'born in', datetime.strftime(year, '%Y'))
     print()
 
 born_1986()
