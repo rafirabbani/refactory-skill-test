@@ -82,10 +82,9 @@ def article_tips():
         articles = datas['articles:']
         for title in articles:
             if subString in title['title']:
-                tips_list.append(datas['username'])
-        tips_count = tips_list.count(datas['username'])
-        if tips_count > 0:
-            print('username', datas['username'], 'has article(s) with \"tips" on the title')
+                tips_list.append(title['title'])
+    for item in tips_list:
+        print('Title of this artice is', '"'+ item + '"')
     print()
 
 article_tips()
